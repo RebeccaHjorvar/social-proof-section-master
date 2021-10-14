@@ -43,7 +43,7 @@
           </p>
         </div>
         <div class="reviews">
-          <div class="review-card">
+          <div class="review-card top">
             <div class="stars">
               <img src="./images/icon-star.svg" alt="star" />
               <img src="./images/icon-star.svg" alt="star" />
@@ -53,7 +53,7 @@
             </div>
             <p>Rated 5 Stars in Reviews</p>
           </div>
-          <div class="review-card">
+          <div class="review-card middle">
             <div class="stars">
               <img src="./images/icon-star.svg" alt="star" />
               <img src="./images/icon-star.svg" alt="star" />
@@ -63,7 +63,7 @@
             </div>
             <p>Rated 5 Stars in Report Guru</p>
           </div>
-          <div class="review-card">
+          <div class="review-card bottom">
             <div class="stars">
               <img src="./images/icon-star.svg" alt="star" />
               <img src="./images/icon-star.svg" alt="star" />
@@ -77,7 +77,7 @@
       </div>
 
       <div class="testimonials">
-        <div class="testimonial-card">
+        <div class="testimonial-card top">
           <div class="testimonial-header">
             <img src="./images/image-colton.jpg" alt="" />
             <span>
@@ -91,7 +91,7 @@
             received it in time. Excellent!"
           </p>
         </div>
-        <div class="testimonial-card">
+        <div class="testimonial-card middle">
           <div class="testimonial-header">
             <img src="./images/image-irene.jpg" alt="" />
             <span>
@@ -105,7 +105,7 @@
             speed of delivery."
           </p>
         </div>
-        <div class="testimonial-card">
+        <div class="testimonial-card bottom">
           <div class="testimonial-header">
             <img src="./images/image-anne.jpg" alt="" />
             <span>
@@ -144,6 +144,7 @@
     flex-direction: column;
     align-content: center;
     margin: 0 auto;
+    padding-top: 10%;
     width: 90%;
   }
 
@@ -197,14 +198,14 @@
     align-items: center;
   }
   .testimonial-header p {
-    margin:0;
+    margin: 0;
     line-height: 150%;
   }
   .name {
-    color:hsl(0, 0%, 100%)
+    color: hsl(0, 0%, 100%);
   }
-  .buyer{
-    color:hsl(333, 80%, 67%)
+  .buyer {
+    color: hsl(333, 80%, 67%);
   }
   .testimonial-header img {
     border-radius: 100%;
@@ -212,10 +213,85 @@
     height: 50px;
     margin-right: 10%;
   }
-  .testimonial{
-    color:hsl(300, 24%, 96%);
+  .testimonial {
+    color: hsl(300, 24%, 96%);
     line-height: 150%;
     letter-spacing: 0.5px;
-    margin: 2.5em 0 0 0 ;
+    margin: 2.5em 0 0 0;
+  }
+  @media screen and (min-width: 1140px) {
+    .container {
+      width: 90%;
+      padding:20%;
+    }
+    .hero {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .text{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 15px;
+      text-align: left;
+    }
+    .text h1 {
+      padding: 0;
+      width: 10em;
+      margin:0;
+
+    }
+    .text p {
+      width: 30em;
+      line-height: 180%;
+      margin-bottom: 0;
+    }
+    .reviews {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 50%;
+      margin:0;
+      padding:0;
+    }
+    .review-card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: start;
+      width: 100%;
+    }
+    .stars {
+      margin: 0 1.5em;
+    }
+    .review-card.top {
+      margin-left:-4em;
+      margin-top:0;
+    }
+    .review-card.middle {
+      margin-left:-2em;
+    }
+    .testimonials {
+      display: flex;
+      flex-direction: row;
+      align-items:center;
+      justify-items: space-between;
+      margin-top: 0;
+    }
+    .testimonial{
+     font-size: 12px;
+    }
+    .testimonial-card.top {
+      margin-top: 2em;
+     margin-right: 2em;
+    }
+    .testimonial-card.middle {
+      margin-top: 5em;
+      margin-right: 2em;
+    }
+    .testimonial-card.bottom {
+      margin-top: 8em;
+    }
   }
 </style>
